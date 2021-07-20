@@ -4,14 +4,16 @@ import reactDom from 'react-dom'
 function Greeting() {
   return (
     <div>
-      <h4>Hello World</h4>
-      <ul>
-        <li>
-          <a href='#'>Hello World </a>
-        </li>
-      </ul>
+      <Person></Person>
+      <Message></Message>
     </div>
   )
+}
+
+const Person = () => <h4>Abhishek Chandra</h4>
+
+const Message = () => {
+  return <p>This is my intoduction</p>
 }
 
 // This is happening in the backend
