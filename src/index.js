@@ -7,37 +7,25 @@ function BookList() {
   return (
     <section className='BookList'>
       <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
     </section>
   )
 }
-
+const author = 'Héctor García'
 const Book = () => {
+  const title = 'Ikigai: The Japanese secret to a long and Happy Life'
   return (
     <article className='book'>
-      <Img />
-      <Title />
-      <Author />
+      <img
+        src='https://images-eu.ssl-images-amazon.com/images/I/81l3rZK4lnL._AC_UL200_SR200,200_.jpg'
+        alt=''
+      />
+      <h1>{title}</h1>
+
+      <h4>{author.toUpperCase()}</h4>
+      {/* <p>{let x = 4}</p> */}
+      <p>{6 + 6}</p>
     </article>
   )
 }
-
-const Img = () => (
-  <img
-    src='https://images-eu.ssl-images-amazon.com/images/I/81l3rZK4lnL._AC_UL200_SR200,200_.jpg'
-    alt=''
-  />
-)
-
-const Title = () => (
-  <h1>Ikigai: The Japanese secret to a long and Happy Life </h1>
-)
-
-const Author = () => <h4>Héctor García</h4>
 
 reactDom.render(<BookList />, document.getElementById('root'))
